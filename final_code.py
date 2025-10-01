@@ -2,8 +2,11 @@ import telebot
 from telebot import types
 from telebot.handler_backends import State, StatesGroup
 from telebot.storage import StateMemoryStorage
+from config import get_config
 
-bot = telebot.TeleBot('8088954048:AAEb7HgHkz9VR6OkoqVQSOS0hUkWORxzk9k')
+config = get_config()
+
+bot = telebot.TeleBot(config.telegram_bot_api_key)
 
 
 users = {
